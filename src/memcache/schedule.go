@@ -157,7 +157,7 @@ type ManualScheduler struct {
     feedChan   chan *Feedback
 }
 
-// the string is a Hex int string, if it start with -, it means serve the bucket as a backup
+// The string is a Hex int string, if it start with -, it means serve the bucket as a backup
 func NewManualScheduler(config map[string][]string, bs, n int) *ManualScheduler {
     defer func() {
         if r := recover(); r != nil {
